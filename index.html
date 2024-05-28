@@ -27,6 +27,12 @@
             color: blue !important;
             text-decoration: none !important;
         }
+
+        /* Ефект :hover для обох блоків */
+        .popular-stars:first-child:hover,
+        .richest-stars:first-child:hover {
+            background-color: #f0f0f0; /* Змінимо колір фону при наведенні курсора */
+        }
     </style>
 </head>
 <body>
@@ -128,6 +134,33 @@
         <iframe src="page2.html" class="inline-frame"></iframe>
         <iframe src="page3.html" class="inline-frame"></iframe>
         <iframe src="page4.html" class="inline-frame"></iframe>
+    </section>
+
+    <section class="oscar">
+
+
+        <div class="card">
+            <div class="card-content">
+                <div class="card-front">
+                    <p class="sub-title">Oscar</p>
+                    <h1 class="title"></h1>
+                    <p class="sub-title">Natalie Portman</p>
+                </div>
+                <div class="card-back">
+                    <div class="back-title">Black Swan</div>
+                    <div class="movie-description">
+                        <span>Genre: </span>  drama
+                    </div>
+                    <div class="genre">
+                        <span> Director: </span> MDarren Aronofsky
+                    </div>
+                    <div class="release-date">
+                        <span>Year: </span>2010
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 </body>

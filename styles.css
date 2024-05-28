@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #dddddd;
+    background-color: whitesmoke;
 }
 
 .header {
@@ -91,6 +91,7 @@ body {
 }
 
 .inline-frame {
+    background-color: lightgrey;
     position: revert;
     bottom: 10px;
     right: 10px;
@@ -116,4 +117,103 @@ ul {
 
 .custom-list li {
     margin-bottom: 10px; /* Відступ вниз між елементами списку */
+}
+
+.oscar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    width: 400px;
+}
+
+.card-content {
+    position: relative;
+    padding: 15rem 5rem;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+.card:hover .card-content {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 1rem;
+}
+.card-front,
+.card-back {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    color: black;
+}
+.card-front {
+    background-image: url(assets/img2.png);
+    background-color: rgba(255, 163, 42, 0.2);
+    align-items: center;
+}
+.card-front::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border: 3px solid black;
+    transform: translateZ(2rem);
+    border-radius: 1rem;
+}
+.title {
+    font-family: "Teko", sans-serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    line-height: 120%;
+    transform: translateZ(4.4rem);
+}
+.sub-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transform: translateZ(3rem);
+}
+
+.card-back {
+    background-image: url(assets/Img.png);
+    transform: rotateY(180deg);
+    gap: 0.5rem;
+}
+.back-title {
+    font-family: "Teko", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    align-self: center;
+    transform: translateZ(2rem);
+}
+
+/* Стилі для першого блоку "Топ 5 найпопулярніших зірок 2023 року" */
+.popular-stars:first-child {
+    float: left;
+    width: 50%;
+}
+
+/* Стилі для другого блоку "Топ 5 найбільш високооплачуваних акторів 2023 року" */
+.richest-stars:first-child {
+    float: left;
+    width: 50%;
 }
