@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #dddddd;
+}
+
+.header {
+    background-image: url('https://artdeptstudios.wordpress.com/wp-content/uploads/2012/08/w1z5c.jpeg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+    color: #4c2c08;
+}
+
+.header h1 {
+    color: #98700d;
+    font-family: 'Galvji', sans-serif;
+    font-size: 50px;
+}
+
+.intro-text {
+    color: #4c2c08;
+    font-size: 20px;
+}
+
+.info-text {
+    color: #6c3c07;
+    font-size: 18px;
+}
+
+.link-text {
+    color: rgba(31, 33, 39, 0.89);
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+.section-title {
+    color: rgba(122, 1, 1, 0.85);
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+.description {
+    font-size: 19px;
+    color: rgba(94, 25, 25, 0.83);
+}
+
+.more-info {
+    color: chocolate;
+    font-family: 'Arial Narrow', sans-serif;
+    font-size: 18px;
+}
+
+.favorite-actors {
+    font-family: Tahoma, sans-serif;
+}
+
+.favorite-actors h2 {
+    font-size: 25px;
+    color: #0b1373;
+}
+
+.rankings {
+    background: black;
+}
+
+.popular-stars, .richest-stars {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.popular-stars h3, .richest-stars h3 {
+    font-size: 23px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.images img {
+    margin: 0 10px;
+}
+
+.sub-section-title {
+    font-size: 23px;
+    font-family: Times, serif;
+    color: rgba(94, 25, 25, 0.83);
+}
+
+.inline-frame {
+    position: revert;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    height: 200px;
+    border: none;
+}
+
+#main {
+    font-size: 100px;
+    text-shadow: black 4px 6px;
+}
+
+ul {
+    text-align: left;
+}
+.custom-list {
+    margin-left: 20px; /* Заповнення зліва */
+    font-size: 18px; /* Розмір шрифту */
+    font-family: Arial, sans-serif; /* Тип шрифту */
+    color: #333; /* Колір тексту */
+}
+
+.custom-list li {
+    margin-bottom: 10px; /* Відступ вниз між елементами списку */
+}

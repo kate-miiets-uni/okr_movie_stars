@@ -5,21 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зірки кіно - Класичні зірки кіно</title>
     <meta name="author" content="Коломієць Катерина">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d3d3d3;
+            color: #333;
+            margin: 20px;
+        }
+
+        /* Стилі для заголовків */
+        h1 {
+            color: #930202;
+            font-size: 32px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h3 {
+            color: #2b2c35;
+            font-size: 28px;
+            font-family: 'serif', serif;
+            font-weight: normal; /* Revert font-weight to normal */
+        }
+
+        /* Стилі для абзаців */
+        p {
+            font-size: 19px;
+            color: #610808;
+        }
+
+        /* Стилі для посилань */
+        a {
+            color: #191970;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #c71585;
+        }
+
+        a:active {
+            color: purple;
+        }
+
+        /* Стилі для списків визначень */
+        dl {
+            font-family: 'Arial Narrow', sans-serif;
+        }
+
+        dt {
+            color: #9f6519;
+            font-size: 25px;
+        }
+
+        dd {
+            color: #633805;
+            font-size: 20px;
+        }
+
+        /* Стилі для таблиці */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-image: url('https://st3.depositphotos.com/1006472/14414/i/450/depositphotos_144146755-stock-photo-light-gray-grunge-texture-of.jpg');
+            color: rgba(33, 33, 48, 0.89);
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 3px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-size: 20px;
+        }
+
+        td img {
+            width: 200px;
+            height: auto;
+        }
+
+        thead tr {
+            text-align: left;
+        }
+    </style>
 </head>
 <body bgcolor="#d3d3d3" link="#191970" vlink="#c71585" alink="purple">
-<h1 style="color: #930202; font-size: 32px; font-family: 'Arial'"><b>Класичні зірки кіно</b></h1>
-<p style="font-size: 22px; color: #750202"><i>Ласкаво просимо на сторінку "Класичні зірки кіно" нашого сайту про зірок кіно.</i></p>
-<p style="color: #610808; font-size: 19px">Тут ви знайдете інформацію про акторів, які були представниками <font color="#b8860"><b>Золотого Голлівуду.</b></font></p>
-<p style="color: rgba(31,33,39,0.89); font-family: 'Arial Narrow'">Для повернення на головну сторінку, будь ласка, перейдіть за <a href="index.html">посиланням</a>.</p>
+<h1><b>Класичні зірки кіно</b></h1>
+<p class="intro-text"><i>Ласкаво просимо на сторінку "Класичні зірки кіно" нашого сайту про зірок кіно.</i></p>
+<p class="info-text">Тут ви знайдете інформацію про акторів, які були представниками <font color="#b8860"><b>Золотого Голлівуду.</b></font></p>
+<p class="link-text">Для повернення на головну сторінку, будь ласка, перейдіть за <a href="index.html">посиланням</a>.</p>
 <dl>
-    <dt id="golden-hollywood" style="color: #9f6519; font-size: 25px; font-family: 'Arial Narrow'">Класичний кінематограф Голлівуду</dt>
-    <dd style="font-size: 20px; font-family: Arial; color: #633805">Термін, який застосовується в історії кіно, що позначає як візуальний, так і звуковий стиль
-        кінозйомок і спосіб виробництва фільмів в американській кіноіндустрії з 1910 по 1965 рік.</dd>
+    <dt id="golden-hollywood">Класичний кінематограф Голлівуду</dt>
+    <dd>Термін, який застосовується в історії кіно, що позначає як візуальний, так і звуковий стиль кінозйомок і спосіб виробництва фільмів в американській кіноіндустрії з 1910 по 1965 рік.</dd>
 </dl>
-<h3 style="color: #2b2c35; font-weight: revert; font-size: 28px; font-family: serif"><i>Зірки класичного Голлівуду</i></h3>
-<table border="3" style="color: rgba(33,33,48,0.89)" background="https://st3.depositphotos.com/1006472/14414/i/450/depositphotos_144146755-stock-photo-light-gray-grunge-texture-of.jpg">
+<h3><i>Зірки класичного Голлівуду</i></h3>
+<table>
     <thead>
-    <tr  align="left" style="font-size: 20px">
+    <tr>
         <th>Кларк Ґейбл</th>
         <th>Мерилін Монро</th>
         <th>Бастер Кітон</th>
@@ -27,17 +113,16 @@
     </tr>
     </thead>
     <tbody>
-    <tr align="center">
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Clark_Gable_-_publicity.JPG" alt="Кларк Ґейбл" width="200"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Monroe_1953_publicity_%28cropped%29.jpg/220px-Monroe_1953_publicity_%28cropped%29.jpg" alt="Мерилін Монро" width="200"></td>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH8aAfT91f1J4rsOCjDwUWUMMru-wCkvpdfInYZRPuyQ&s" alt="Бастер Кітон" width="200"></td>
-        <td><img src="https://cdn.vogue.ua/i/image_720x/uploads/article-inline/a3d/30e/b29/GettyImages-517240636_5fbbb2930ea3d.jpeg.webp" alt="Одрі Гепберн" width="200"></td>
-    </tr>
+    <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Clark_Gable_-_publicity.JPG" alt="Кларк Ґейбл"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Monroe_1953_publicity_%28cropped%29.jpg/220px-Monroe_1953_publicity_%28cropped%29.jpg" alt="Мерилін Монро"></td>
+        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH8aAfT91f1J4rsOCjDwUWUMMru-wCkvpdfInYZRPuyQ&s" alt="Бастер Кітон"></td>
+        <td><img src="https://cdn.vogue.ua/i/image_720x/uploads/article-inline/a3d/30e/b29/GettyImages-517240636_5fbbb2930ea3d.jpeg.webp" alt="Одрі Гепберн"></td>
     <tr>
         <td><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B0%D1%80%D0%BA_%D2%90%D0%B5%D0%B9%D0%B1%D0%BB">Кларк Ґейбл у Вікіпедії</a></td>
         <td><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%80%D0%B8%D0%BB%D1%96%D0%BD_%D0%9C%D0%BE%D0%BD%D1%80%D0%BE">Мерилін Монро у Вікіпедії</a></td>
         <td><a href="https://uk.wikipedia.org/wiki/%D0%91%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%9A%D1%96%D1%82%D0%BE%D0%BD">Бастер Кітон у Вікіпедії</a></td>
-        <td><a href="https://uk.wikipedia.org/wiki/%D0%9E%D0%B4%D1%80%D1%96_%D0%93%D0%B5%D0%BF%D0%B1%D0%B5%D1%80%D0%BD">Одрі Гепберн у Вікіпедії</a></td>
+        <td><a href="https://uk.wikipedia.org/wiki/%D0%9E%D0%B4%D1%80%D1%96_%D0%93%D0%B5%D0%BF%D0%B5%D1%80%D0%BD">Одрі Гепберн у Вікіпедії</a></td>
     </tr>
     <tr>
         <td>«Король Голлівуду» - актор, секс-символ 30-х і 40-х років. Найбільше відомий роллю Рета Батлера у
@@ -55,5 +140,20 @@
     </tr>
     </tbody>
 </table>
+<!-- Маркований список з класом "custom-list" -->
+
+<ul class="custom-list">
+    <li>Найвідоміші фільми Золотої епохи Голлівуду</li>
+    <li>Інтерв'ю з класичними акторами</li>
+    <li>Фотографії студійних зйомок</li>
+</ul>
+
+<!-- Нумерований список з класом "custom-list" -->
+
+<ol class="custom-list">
+    <li>Життєві цікавинки про класичних зірок</li>
+    <li>Кар'єрні вершини та крахи</li>
+    <li>Кращі ролі акторів та актрис</li>
+</ol>
 </body>
 </html>
