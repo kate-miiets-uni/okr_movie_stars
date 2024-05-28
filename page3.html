@@ -7,8 +7,8 @@
     <meta name="author" content="Коломієць Катерина">
     <style>
         /* Контекстні селектори */
-        td img  {
-            border: 10px  solid black;
+        td img {
+            border: 10px solid black;
         }
 
         .sec a {
@@ -24,6 +24,21 @@
             float: left; /* Applying float attribute */
             margin-right: 20px; /* Adding some margin for spacing */
         }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .draggable {
+            cursor: move;
+        }
+
+        .dropzone {
+            border: 2px dashed grey;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: lightgrey;
+        }
     </style>
 </head>
 <body>
@@ -35,54 +50,81 @@
 <div class="float-div">
     <table border="5" bordercolor="#778899" background="https://st2.depositphotos.com/4018531/8173/i/450/depositphotos_81730496-stock-photo-white-gray-marble-texture-background.jpg">
         <tr>
-            <td><img src="https://media1.popsugar-assets.com/files/thumbor/HwtAUAufmAZv-FgGEIMJS2eQM-A/0x1:2771x2772/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/03/30/878/n/1922398/eb11f12e5e825104ca01c1.02079643_/i/Robert-Downey-Jr.jpg" alt="Роберт Дауні-мололший" width="150"></td>
-            <td ><a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%94%D0%B0%D1%83%D0%BD%D1%96_(%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D1%88%D0%B8%D0%B9)">Роберт Дауні-мололший у Вікіпедії</a></td>
-            <td>Роберт Джон Дауні-молодший </td>
+            <td class="hoverable"><img src="https://media1.popsugar-assets.com/files/thumbor/HwtAUAufmAZv-FgGEIMJS2eQM-A/0x1:2771x2772/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/03/30/878/n/1922398/eb11f12e5e825104ca01c1.02079643_/i/Robert-Downey-Jr.jpg" alt="Роберт Дауні-мололший" width="150"></td>
+            <td><a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%94%D0%B0%D1%83%D0%BD%D1%96_(%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D1%88%D0%B8%D0%B9)">Роберт Дауні-мололший у Вікіпедії</a></td>
+            <td>Роберт Джон Дауні-молодший</td>
         </tr>
     </table>
 </div>
 
 <table border="5" bordercolor="#778899" background="https://st2.depositphotos.com/4018531/8173/i/450/depositphotos_81730496-stock-photo-white-gray-marble-texture-background.jpg">
     <tr>
-        <td><img src="https://media1.popsugar-assets.com/files/thumbor/HwtAUAufmAZv-FgGEIMJS2eQM-A/0x1:2771x2772/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/03/30/878/n/1922398/eb11f12e5e825104ca01c1.02079643_/i/Robert-Downey-Jr.jpg" alt="Роберт Дауні-мололший" width="150"></td>
-        <td ><a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%94%D0%B0%D1%83%D0%BD%D1%96_(%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D1%88%D0%B8%D0%B9)">Роберт Дауні-молодший у Вікіпедії</a></td>
-        <td>Роберт Джон Дауні-молодший - американський актор, продюсер і музикант. Народився 4 квітня 1965 у родині незалежного режисера Роберта Дауні-старшого.
-            У 17 залишив школу, щоб стати актором. У віці двадцяти років (в 1985 році) Дауні-мол. на один сезон приєднався до команди, що випускає найпопулярніше
-            американське телешоу «Суботнього вечора у прямому ефірі». Після досвіду на телебаченні він остаточно вирішив зв'язати долю з кінематографом і переїхав у Голлівуд.
-            Став широко відомий після релізу байопіку «Чаплін»
-            . Також завдячує своїм успіхом ролям у таких фільмах, як "Месники", всі частини "Залізної людини", «Людина-павук: Повернення додому»
-            , «Шерлок Холмс», "Дулітл" та інших.</td>
+        <td class="hoverable draggable" id="drag-item"><img src="https://media1.popsugar-assets.com/files/thumbor/HwtAUAufmAZv-FgGEIMJS2eQM-A/0x1:2771x2772/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/03/30/878/n/1922398/eb11f12e5e825104ca01c1.02079643_/i/Robert-Downey-Jr.jpg" alt="Роберт Дауні-мололший" width="150"></td>
+        <td><a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%94%D0%B0%D1%83%D0%BD%D1%96_(%D0%BC%D0%BE%D0%BB%D0%BE%D0%B4%D1%88%D0%B8%D0%B9)">Роберт Дауні-мололший у Вікіпедії</a></td>
+        <td>Роберт Джон Дауні-молодший - американський актор, продюсер і музикант. Народився 4 квітня 1965 у родині незалежного режисера Роберта Дауні-старшого. У 17 залишив школу, щоб стати актором. У віці двадцяти років (в 1985 році) Дауні-мол. на один сезон приєднався до команди, що випускає найпопулярніше американське телешоу «Суботнього вечора у прямому ефірі». Після досвіду на телебаченні він остаточно вирішив зв'язати долю з кінематографом і переїхав у Голлівуд. Став широко відомий після релізу байопіку «Чаплін». Також завдячує своїм успіхом ролям у таких фільмах, як "Месники", всі частини "Залізної людини", «Людина-павук: Повернення додому», «Шерлок Холмс», "Дулітл" та інших.</td>
     </tr>
     <tr>
-        <td><img src="https://hips.hearstapps.com/hmg-prod/images/nicole_kidman_photo_stuart_c_wilson_getty_images_693045658_profile.jpg?crop=1xw:0.9823182711198428xh;center,top&resize=640:*" alt="Ніколь Кідман" width="150"></td>
+        <td class="hoverable"><img src="https://hips.hearstapps.com/hmg-prod/images/nicole_kidman_photo_stuart_c_wilson_getty_images_693045658_profile.jpg?crop=1xw:0.9823182711198428xh;center,top&resize=640:*" alt="Ніколь Кідман" width="150"></td>
         <td><a href="https://uk.wikipedia.org/wiki/%D0%9D%D1%96%D0%BA%D0%BE%D0%BB%D1%8C_%D0%9A%D1%96%D0%B4%D0%BC%D0%B0%D0%BD">Ніколь Кідман у Вікіпедії</a></td>
-        <td>Ніколь Мері Кідман - австралійська й американська акторка, співачка, продюсерка, активістка, дипломатка
-            . Народилася 20 червня 1967 року в Гонолулу, адміністративному центрі американського штату Гаваї.
-            З чотирьох років Ніколь почала займатися балетом. Захоплення танцями привело її до Австралійського
-            театру для молоді, а потім до Театру Філіп-стріт, де, крім акторського хисту, вдосконалювала вокальні
-            навички і вивчала історію театру. Дебют юної актриси в кінематографі відбувся в 1982 році, коли їй було
-            14 років – Ніколь знялася в сімейній картині “Різдво в лісі” Знялася в таких кінострічках: "Аквамен",
-            "Померти заради", "Пригоди Падінгтона", "Степфордські жінки" тощо.</td>
+        <td>Ніколь Мері Кідман - австралійська й американська акторка, співачка, продюсерка, активістка, дипломатка. Народилася 20 червня 1967 року в Гонолулу, адміністративному центрі американського штату Гаваї. З чотирьох років Ніколь почала займатися балетом. Захоплення танцями привело її до Австралійського театру для молоді, а потім до Театру Філіп-стріт, де, крім акторського хисту, вдосконалювала вокальні навички і вивчала історію театру. Дебют юної актриси в кінематографі відбувся в 1982 році, коли їй було 14 років – Ніколь знялася в сімейній картині “Різдво в лісі” Знялася в таких кінострічках: "Аквамен", "Померти заради", "Пригоди Падінгтона", "Степфордські жінки" тощо.</td>
     </tr>
     <tr>
-        <td><img src="https://media.themoviedb.org/t/p/w235_and_h235_face/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg" alt="Роберт Паттінсон" width="150"></td>
-        <td class="sec"> <a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%9F%D0%B0%D1%82%D1%82%D1%96%D0%BD%D1%81%D0%BE%D0%BD">Роберт Паттінсон у Вікіпедії</a></td>
-        <td>Роберт Дуґлас Томас Паттінсон - англійський актор, модель та музикант. Народився 13 травня 1986 року в передмісті Лондона, Велика Британія. Паттінсон розпочав кар'єру у віці
-            15 років у аматорському театрі. Першим досвідом у кіно для Роберта стала роль другого плану у фільмі "Кільце Нібелунгів", який вийшов на екрани в 2004 році. Вже через рік Роберт
-            був запрошений на роль Седріка Діґорі у фільм «Гаррі Поттер та Кубок вогню», яка принесла йому прихильність критиків, що охрестили його «Британською зіркою завтрашнього дня». Найбільше відомий за ролями
-            у серії фільмів "Сутінки", а також отримав визнання за ролі в таких кіно: «Гаррі Поттер і кубок
-            вогню», «Тенет», "Бетмен", "Води слонам" тощо.</td>
+        <td class="hoverable"><img src="https://media.themoviedb.org/t/p/w235_and_h235_face/3qZ09UE7lN6AtorfXFRYpEtSY93.jpg" alt="Роберт Паттінсон" width="150"></td>
+        <td class="sec"><a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_%D0%9F%D0%B0%D1%82%D1%82%D1%96%D0%BD%D1%81%D0%BE%D0%BD">Роберт Паттінсон у Вікіпедії</a></td>
+        <td>Роберт Дуґлас Томас Паттінсон - англійський актор, модель та музикант. Народився 13 травня 1986 року в передмісті Лондона, Велика Британія. Паттінсон розпочав кар'єру у віці 15 років у аматорському театрі. Першим досвідом у кіно для Роберта стала роль другого плану у фільмі "Кільце Нібелунгів", який вийшов на екрани в 2004 році. Вже через рік Роберт був запрошений на роль Седріка Діґорі у фільм «Гаррі Поттер та Кубок вогню», яка принесла йому прихильність критиків, що охрестили його «Британською зіркою завтрашнього дня». Найбільше відомий за ролями у серії фільмів "Сутінки", а також отримав визнання за ролі в таких кіно: «Гаррі Поттер і кубок вогню», «Тенет», "Бетмен", "Води слонам" тощо.</td>
     </tr>
     <tr>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsyJYr4XqJd81oEWHlsuuP4JrdCpjkT13aW8rYcKhZaw&s" alt="Крістен Стюарт" width="150"></td>
+        <td class="hoverable"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsyJYr4XqJd81oEWHlsuuP4JrdCpjkT13aW8rYcKhZaw&s" alt="Крістен Стюарт" width="150"></td>
         <td><a href="https://uk.wikipedia.org/wiki/%D0%9A%D1%80%D1%96%D1%81%D1%82%D0%B5%D0%BD_%D0%A1%D1%82%D1%8E%D0%B0%D1%80%D1%82">Крістен Стюарт у Вікіпедії</a></td>
-        <td>Крістен Джеймс Стюарт - мериканська акторка, відома своїми ролями у кінофільмах: «Злови ту дитину», «Кімната паніки», «Затура», «У країні жінок»,
-            «Білосніжка та мисливець», «Сутінки», "Табір «X-Ray»", "Спенсер: Таємниця принцеси Діани" та багатьох інших. Народилася у Лос-Анджелесі 9 квітня 1990.
-            Батько Крістен був телевізійним продюсером, директором багатьох програм на каналі Fox. Акторська кар'єра почалася у віці 8 років. Тоді вона зіграла
-            роль в невеликій різдвяної постановці в школі. Перша роль Крістен в кіно була також невеликою: вона зіграла у фільмі «The Thirteenth Year», де від
-            неї не було потрібно ніяких слів. А в 2002 році Крістен Стюарт знялася у фільмі «Кімната страху». Зігравши разом з цілою плеядою справжніх зірок,
-            Крістен показала себе не гірше, і в 2003 році була номінована на премію «Молодий артист».</td>
+        <td>Крістен Джеймс Стюарт - американська акторка, відома своїми ролями у кінофільмах: «Злови ту дитину», «Кімната паніки», «Затура», «У країні жінок», «Білосніжка та мисливець», «Сутінки», "Табір «X-Ray»", "Спенсер: Таємниця принцеси Діани" та багатьох інших. Народилася у Лос-Анджелесі 9 квітня 1990. Батько Крістен був телевізійним продюсером, директором багатьох програм на каналі Fox. Акторська кар'єра почалася у віці 8 років. Тоді вона зіграла роль в невеликій різдвяної постановці в школі. Перша роль Крістен в кіно була також невеликою: вона зіграла у фільмі «The Thirteenth Year», де від неї не було потрібно ніяких слів. А в 2002 році Крістен Стюарт знялася у фільмі «Кімната страху». Зігравши разом з цілою плеядою справжніх зірок, Крістен показала себе не гірше, і в 2003 році була номінована на премію «Молодий артист».</td>
     </tr>
 </table>
+
+<div class="dropzone" id="dropzone">Перетягніть сюди елементи</div>
+
+<script>
+    document.querySelectorAll('.hoverable').forEach(element => {
+        element.addEventListener('mouseover', (event) => {
+            event.target.classList.add('highlight');
+        });
+
+        element.addEventListener('mouseout', (event) => {
+            event.target.classList.remove('highlight');
+        });
+    });
+
+    let draggedItem = null;
+
+    document.querySelectorAll('.draggable').forEach(item => {
+        item.addEventListener('mousedown', (event) => {
+            draggedItem = item;
+            event.target.classList.add('dragging');
+        });
+    });
+
+    document.addEventListener('mousemove', (event) => {
+        if (draggedItem) {
+            draggedItem.style.position = 'absolute';
+            draggedItem.style.left = event.pageX + 'px';
+            draggedItem.style.top = event.pageY + 'px';
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (draggedItem) {
+            draggedItem.classList.remove('dragging');
+            draggedItem = null;
+        }
+    });
+
+    document.getElementById('dropzone').addEventListener('mouseup', (event) => {
+        if (draggedItem) {
+            event.target.appendChild(draggedItem);
+            draggedItem.style.position = 'static';
+            draggedItem.classList.remove('dragging');
+            draggedItem = null;
+        }
+    });
+</script>
 </body>
 </html>
