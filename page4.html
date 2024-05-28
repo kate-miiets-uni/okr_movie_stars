@@ -37,8 +37,8 @@
 <body bgcolor="#FDCED7FF" link="#191970" vlink="#c71585" alink="purple">
 <h1 style="color: #930202; font-size: 32px; font-family: 'Arial'"><b>Молоді таланти</b></h1>
 <p style="font-size: 22px;"><i>Ласкаво просимо на сторінку "Молоді таланти" нашого сайту про зірок кіно.</i></p>
-<p style=" font-size: 19px">Тут ви знайдете інформацію про молодих акторів, які тільки починають свій шлях у кіноіндустрії, але вже показують вражаючі таланти та потенціал.</p>
-<p style="color: rgba(31,33,39,0.89); font-family: 'Arial Narrow'">Для повернення на головну сторінку, будь ласка, перейдіть за <a href="index.html">посиланням</a>.</p>
+<p  id="second" style=" font-size: 19px">Тут ви знайдете інформацію про молодих акторів, які тільки починають свій шлях у кіноіндустрії, але вже показують вражаючі таланти та потенціал.</p>
+<p  id="last" style="color: rgba(31,33,39,0.89); font-family: 'Arial Narrow'">Для повернення на головну сторінку, будь ласка, перейдіть за <a href="index.html">посиланням</a>.</p>
 
 <table cellspacing="10" cellpadding="10">
     <colgroup>
@@ -102,11 +102,63 @@
             , серії фільмів «Людина-павук». </td>
     </tr>
     </tbody>
-    <tfoot background="https://cdn.27.ua/sc--media--prod/default/20/3f/ba/203fba24-5a79-4435-97a1-588652803b20.jpg">
+    <tfoot id="footer" background="https://cdn.27.ua/sc--media--prod/default/20/3f/ba/203fba24-5a79-4435-97a1-588652803b20.jpg">
     <tr>
         <td colspan="3" align="center">Для більш детальної інформації відвідайте <a href="https://www.imdb.com">IMDb</a>.</td>
     </tr>
     </tfoot>
 </table>
+<script>
+    // // Зміна кольору фону на жовтий
+    // document.body.style.backgroundColor = "yellow";
+    //
+    // // Чекаємо 30 секунд перед відновленням оригінального кольору фону
+    // setTimeout(function(){
+    //     document.body.style.backgroundColor = ""; // Відновлення оригінального кольору фону
+    // }, 30000); // 30 секунд (30000 мілісекунд)
+
+    // // Перенаправлення на іншу сторінку через 5 секунд
+    // setTimeout(function(){
+    //     location.href = "https://ru.wikipedia.org/wiki/%D0%9A%D0%B8%D0%BD%D0%BE_(%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)";
+    // }, 5000); // 5 секунд (5000 мілісекунд)
+
+
+    // Зміна тексту заголовка за допомогою querySelectorAll
+    document.querySelectorAll("h1")[0].textContent = "  КІНО ";
+
+    // Зміна тексту заголовка за допомогою getElementById
+    document.getElementById("second").textContent = "КІНО";
+
+    // Видалення елементу
+    let elementToRemove = document.getElementById("second");
+    elementToRemove.parentNode.removeChild(elementToRemove);
+
+    // Створення нового елемента
+    let newElement = document.createElement("div");
+    newElement.textContent = "New film";
+
+    // Вставка нового елемента перед іншим елементом
+    let existingElement = document.getElementById("last");
+    existingElement.parentNode.insertBefore(newElement, existingElement);
+
+    // Зміна HTML-вмісту елементу за допомогою innerHTML
+    document.getElementById("last").innerHTML = "<b> Oscar </b>";
+
+    // Створення нового елемента
+    let newElement1 = document.createElement("div");
+    newElement1.textContent = "New";
+
+    // Заміна елементу новим елементом
+    let existingElement1 = document.getElementById("footer");
+    existingElement1.replaceWith(newElement);
+
+
+    // Видалення всіх елементів певного типу за допомогою querySelectorAll і forEach
+    let elementsToRemove = document.querySelectorAll("p");
+    elementsToRemove.forEach(function(element) {
+        element.parentNode.removeChild(element);
+    });
+
+</script>
 </body>
 </html>
